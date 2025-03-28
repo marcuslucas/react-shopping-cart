@@ -1,0 +1,55 @@
+.navbar {
+  display: flex; /* Flexbox for aligning items */
+  justify-content: space-between; /* Space between the logo and nav links */
+  align-items: center; /* Vertically center the items */
+  padding: 1rem 2rem; /* Add padding on left and right */
+  background-color: #333; /* Dark background */
+  color: white; /* White text */
+  width: 100%; /* Make sure navbar spans full width */
+  position: fixed; /* Fix the navbar at the top */
+  top: 0; /* Position it at the top of the page */
+  left: 0; /* Align to the left edge */
+  z-index: 1000; /* Ensure it stays above other content */
+  max-width: 1200px; /* Limit the width of the navbar */
+  margin: 0 auto; /* Center the navbar horizontally */
+}
+
+.logo {
+  flex: 0 1 auto; /* Allow logo to take its own space */
+}
+
+.logoImage {
+  max-height: 50px; /* Adjust the logo size */
+}
+
+.navLinks {
+  display: flex; /* Flexbox for nav items */
+  gap: 2rem; /* Space between nav links */
+  list-style-type: none; /* Remove default list styling */
+}
+
+.navLink {
+  color: white; /* White color for the links */
+  text-decoration: none; /* Remove underline */
+  font-size: 1rem; /* Font size for the links */
+  padding: 0.5rem 1rem; /* Padding around the links */
+  border-radius: 4px; /* Optional: rounded corners */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.navLink:hover {
+  background-color: #555; /* Background color change on hover */
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: flex-start; /* Align items to the left */
+  }
+
+  .navLinks {
+    flex-direction: column; /* Stack the links vertically */
+    gap: 1rem; /* Space between links */
+    width: 100%; /* Make the links take up the full width */
+  }
+}
