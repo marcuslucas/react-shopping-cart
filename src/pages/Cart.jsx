@@ -43,8 +43,7 @@ const Cart = () => {
           .reduce((sum, item) => sum + item.price * item.quantity, 0)
           .toFixed(2)}
       </h2>
-
-      <Link to="/checkout">Checkout</Link>
+      {cart.length > 0 && <Link to="/checkout">Proceed to Checkout</Link>}
     </div>
   );
 };
