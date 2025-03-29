@@ -1,11 +1,17 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+
 import { Link } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
   return (
-    <div>
-      <img src={product.image} alt={product.title} />
+    <div
+      style={{
+        border: "1px solid #ddd",
+        padding: "10px",
+        margin: "10px",
+      }}
+    >
+      <img src={product.image} alt={product.title} width="100" />
       <h2>{product.title}</h2>
       <p>${product.price}</p>
       <Link to={`/product/${product.id}`}>

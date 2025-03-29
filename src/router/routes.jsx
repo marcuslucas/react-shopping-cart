@@ -4,7 +4,6 @@ import Cart from "../pages/Cart";
 import ErrorPage from "../pages/ErrorPage";
 import ProductDetails from "../pages/ProductDetails";
 import Checkout from "../pages/Checkout";
-import { storeData } from "../api/api";
 
 const routes = [
   {
@@ -14,11 +13,11 @@ const routes = [
     children: [
       {
         path: "/",
-        element: <Home storeData={storeData} />,
+        element: <Home />,
       },
       {
         path: "home",
-        element: <Home storeData={storeData} />, // Home page component
+        element: <Home />, // Home page component
       },
       {
         path: "cart",
@@ -26,7 +25,7 @@ const routes = [
       },
       {
         path: "product/:id",
-        element: <ProductDetails products={storeData} />, // Cart page component
+        element: <ProductDetails />, // Cart page component
       },
       {
         path: "checkout",
